@@ -8,4 +8,9 @@ class Method
     {
         echo "method 1";
     }
+
+    public function echoMethod2()
+    {
+        echo "method 2";
+    }
 }
