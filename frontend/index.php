@@ -1,4 +1,5 @@
 <?php
+
 require_once '../backend/Method.php';
 
 use backend\Method;
@@ -21,5 +22,4 @@ $test = new Method();
     <h1>Project Final</h1>
     <h3><?= $test->echoMethod1(); ?></h3>
 </body>
-
 </html>
