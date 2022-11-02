@@ -13,4 +13,9 @@ class Method
   {
     echo "test";
   }
+
+  public function echoMethod2()
+  {
+    echo "method 2";
+  }
 }
