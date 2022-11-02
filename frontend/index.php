@@ -1,3 +1,9 @@
+<?php
+require_once "../backend/Method.php";
+use backend\Method;
+    $method=new Method;
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +13,6 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <?=$method->test()?>
 </body>
 </html>
