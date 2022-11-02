@@ -18,4 +18,10 @@ class Method
   {
     echo "method 2";
   }
+
+  public function tesConflict()
+  {
+    echo "ada conflict woi";
+  }
+
 }
