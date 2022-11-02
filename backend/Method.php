@@ -19,6 +19,11 @@ class Method
     echo "method 2";
   }
 
+  public function log()
+  {
+    echo "Hello World";
+  }
+
   public function tesConflict()
   {
     echo "ada conflict woi";
