@@ -1,0 +1,10 @@
+[
+	{
+		"_id": "", // mongodb ID
+		"name": "Alfi" // nama customer
+	},
+	{
+		"_id": "",
+		"name": "John Doe"
+	}
+]

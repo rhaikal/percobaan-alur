@@ -1,0 +1,17 @@
+[
+	{
+		"_id": "", // mongodb ID
+		"instruction_type": "Transfer", // Jenis transaction
+		"transaction_id": "TF-1212" // ID dari transaction
+	},
+	{
+		"_id": "",
+		"instruction_type": "Call Of",
+		"transaction_id": "CO-1212"
+	},
+	{
+		"_id": "",
+		"instruction_type": "Inspection",
+		"transaction_id": "I-1212"
+	}
+]

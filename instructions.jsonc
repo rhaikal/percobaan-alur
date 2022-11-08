@@ -1,0 +1,222 @@
+[
+	// ini adalan contoh instruction yang pertama
+	{
+		"_id": "86d787d98767g68", // Object_ID otomatis oleh mongodb
+		"status": "In Progress", // status dari instructiuons (Draft, In Progress, Complete, Terminate)
+
+		"instruction_id": "LI-2022-0302 R001", // {type_instruction}-{tahun_dibuat_nomor} R{angka revisi}, instruction id akan dihitung otomatis
+		"instruction_type": "LI", // user memilih tipe instruction (LI / SI)
+
+		"assigned_vendor": "A", // Assigned vendor dipilih dari list vendor di collections vendors.jsonc, silahkan buka halaman tersebut
+		"attention_of": "taufiq", // string nama orang yang bertanggung jawab/bisa dihubungi dari sisi vendor
+		"quotation_no": "MITME-ADL-00", // string nomor dari perusahaan
+		"vendor_address": "B", // alamat yang dipilih hasil dari vendor, jika kurang jelas silahkan ke halaman vendors.jsonc
+
+		// vendor invoice bisa berisi null pada saat pertama kali dibuat
+		// vendor invoice ditambahkan apabila status instructions dalam in progress
+		// satu instruction bisa memiliki banyak vendor invoice
+		"vendor_invoice": [
+			{
+				"invoice_no": "INV-2022-0001", // invoice nomor
+				"invoice_attachments": "link to file attachment", // berisi link ke folder tempat penyimpanan attachments
+				// bisa memiliki lebih dari satu supporting attachments, yang berisi sama dengan invoice attachments
+				// attachment bernilai null jika kosong
+				"supporting_documents": ["link to another file", "link to another file"]
+			}
+		],
+
+		"invoice_to": "Contoh target 1", // invoice to didapat dari collections invoice_target.jsonc
+		"customer": "Alfi", // customer didapat dari collections customers.jsonc
+		"customer_po_no": "PO-001", // customer PO Nomor
+
+		// satu instructuions bisa memiliki banyak cost, dan jumlah total cost dapat dihitung dari total pada tiap tiap cost
+		// untuk field vat_amount (pada table di frontend) itu dapat dihitung sendiri
+		// cost berisi null apabila belum terdapat cost yang diberikan
+		"cost": [
+			{
+				"description": "cleaning pipe", // berisi deskripsi apa yang dilakukan
+				"qty": 2, // quantitas yang dibuthkan
+				"uom": "SHP", // satuan dari kuantitas (SHP|BILL|HRS|MEN|PCS|TRIP|MT)
+				"unit_price": 100, // harga tiap unit
+				"discount": 10, // discount, int dalam persen
+				"vat": 10, // pajak, int dalam persen
+				"sub_total": 100, // total dari qty*unit_price - diskon
+				"total": 30, // total dari sub_total + pajak(vat)
+				"charge_to": "Inosoft" // Kepada siapa tagihan ini diberikan (Inosoft|Customer)
+			},
+			{
+				"description": "load up pipe",
+				"qty": 2,
+				"uom": "SHP",
+				"unit_price": 100,
+				"discount": "",
+				"vat": 10,
+				"sub_total": 100.0,
+				"total": 30.0,
+				"charge_to": "Inosoft"
+			}
+		],
+
+		// Attachments untuk instructions, bisa memiliki lebih dari 1 (untuk sementara masih ditanyakan), berisi null jika tidak ada attachment
+		"attachments": ["link to file", "link to another file"],
+		"notes": "Ini adalah contoh catatan", // catatan untuk instructions yang diberikan
+		"link_to": "another transaksi", // link to ini berisi data yang dipilih dari collection transactions.jsonc, Jika tipe instruction adalah LI maka hanya transactions dengan tipe Transfer dan call of saja yang ditampilkan untuk dipilih, jika tipe instruction adalah SI, maka transactions yang ditampilkan dapat semua tipe
+		// link to dapat berisikan null
+
+		// internal only dapat ditambahkan ketika instructions mempunyai status in progress
+		"internal_only": {
+			// jika tidak ada attachment yang diberikan akan bernilai null, jika ada akan array berisi link ke file
+			"attachments": ["link to another file", "link to another file"],
+			// internal note berisi null, jika tidak terdapat catatan
+			"internal_note": [
+				{
+					"note": "Tolong di cek", // pesan yang diberikan
+					"noted_by": "user1", //  nama user yang memberikan noted
+					"created_at": "2022-11-08 18:11:20", // tanggal dan waktu dibuat
+					"edited_at": "2022-11-08 18:11:20" // tanggal dan waktu diedit
+				},
+				{
+					"note": "Oke",
+					"noted_by": "user2",
+					"created_at": "2022-11-08 18:11:20",
+					"edited_at": "2022-11-08 18:11:20"
+				}
+			]
+		},
+
+		// otomatis diisi dari backend
+		"activity_note": [
+			{
+				"note": "Created Instruction", // pesan aktivitas
+				"performed_by": "Alfi", // nama user yang melakukan perubahan
+				"date": "2022-11-08 18:11:20" // tanggal aktivitas tersebut dilakukan
+			},
+			{
+				"note": "Receive all invoice",
+				"performed_by": "user",
+				"date": "2022-11-08 18:11:20"
+			},
+			{
+				"note": "Canceled Instruction",
+				"performed_by": "user",
+				"date": "2022-11-08 18:11:20"
+			},
+			{
+				"note": "Edited Instruction",
+				"performed_by": "user",
+				"date": "kapan suatu aktivitas terjadi"
+			}
+		],
+
+		// field ini bisa berupa null, jika instructions tidak mempunyai status terimnate
+		"cancellation": {
+			"reason": "invoice doesn't exists", //alasan kenapa dicancel
+			"canceled_by": "user", // dicancel oleh user
+			"attachment": "link to file" // bukti file lampiran, bisa berisi null apabila tidak dikirimkan
+		}
+	},
+	{
+		"_id": "86d787d98767g68",
+		"status": "In Progress",
+		"rev_count": 3,
+		"is_draft": false,
+
+		"instruction_id": "LI-2022-0302 R001",
+		"instruction_type": "LI",
+
+		"assigned_vendor": "A",
+		"attention_of": "taufiq",
+		"quotation_no": "",
+		"vendor_address": "B",
+
+		"vendor_invoice": [
+			{
+				"invoice_no": "12",
+				"invoice_attachments": "link to file attachment",
+				"supporting_documents": ["link to another file", "link to another file"]
+			}
+		],
+
+		"invoice_to": "Contoh target 1",
+		"customer": "Alfi",
+		"customer_po_no": "",
+
+		"cost": [
+			{
+				"description": "",
+				"qty": 2,
+				"uom": "SHP",
+				"unit_price": 100,
+				"discount": "",
+				"vat": 10,
+				"vat_amount": 1.0,
+				"sub_total": 100.0,
+				"total": 30.0,
+				"charge_to": "Inosoft"
+			},
+			{
+				"description": "",
+				"qty": 2,
+				"uom": "SHP",
+				"unit_price": 100,
+				"discount": "",
+				"vat": 10,
+				"vat_amount": 1.0,
+				"sub_total": 100.0,
+				"total": 30.0,
+				"charge_to": "Inosoft"
+			}
+		],
+
+		"attachments": ["link to file", "link to another file"],
+		"notes": "",
+		"link_to": "another transaksi",
+
+		"internal_only": {
+			"attachments": ["link to another file", "link to another file"],
+			"internal_note": [
+				{
+					"note": "Tolong di cek",
+					"noted_by": "user1",
+					"created_at": "tanggal dan waktu dibuat",
+					"edited_at": "tanggal dan waktu diedit"
+				},
+				{
+					"note": "Oke",
+					"noted_by": "user2",
+					"created_at": "tanggal dan waktu dibuat",
+					"edited_at": "tanggal dan waktu diedit"
+				}
+			]
+		},
+
+		"activity_note": [
+			{
+				"note": "Created Instruction",
+				"noted_by": "user",
+				"date": "kapan suatu aktivitas terjadi"
+			},
+			{
+				"note": "Receive all invoice",
+				"noted_by": "user",
+				"date": "kapan suatu aktivitas terjadi"
+			},
+			{
+				"note": "Canceled Instruction",
+				"noted_by": "user",
+				"date": "kapan suatu aktivitas terjadi"
+			},
+			{
+				"note": "Edited Instruction",
+				"noted_by": "user",
+				"date": "kapan suatu aktivitas terjadi"
+			}
+		],
+
+		"cancellation": {
+			"reason": "alasan digagalkan",
+			"canceled_by": "user",
+			"attachment": "link to file"
+		}
+	}
+]

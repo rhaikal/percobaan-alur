@@ -1,0 +1,12 @@
+[
+	{
+		"_id": "<Object_id>", // mongodb ID
+		"name": "A", // Nama vendor
+		"address": ["A", "B"] // satu vendor bisa memiliki lebih dari 1 alamat, dan alamaty tersebut bisa dipilih ke dalam dropdown vendor address, jadi vendor yang dipilih berpengaruh terhadap alamat yang tampil di vendor address
+	},
+	{
+		"_id": "<Object_id>",
+		"name": "B",
+		"address": ["C", "D"]
+	}
+]

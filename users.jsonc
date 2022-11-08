@@ -1,0 +1,8 @@
+{
+	"_id": "87678687676as86868", // mongodb ID
+	"name": "Alfi", // nama user
+	"email": "alfi@gmail.com", //email user
+	"password": "23n2jnj43bhb4h3bhbhjenuw43uu3i4h3434i3huh34uhi34bj", //password
+	"created_at": "", // tanggal dibuat
+	"updated_at": "" // tanggal diubah
+}
