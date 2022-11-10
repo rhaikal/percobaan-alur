@@ -1,19 +1,42 @@
-> Menampilkan dan mencari data instruction (Filter Open(status == In Progress || status == draft) dan Closed) (hanya tampilkan beberapa field)
-> Export semua data instruction yang terlihat ke excel
-> Menambahkan data instruction (LI & SI)
-
-> Menampilkan data instruction berdasarkan id (tampilkan semua data)
-> Menambahkan attachments pada instruction
-> Menambahkan attachments pada internal only 
-> Menambahkan internal note pada internal only
-
+========= Note =========
+> Semua attachments berupa pdf dan doc
+> Export all instructions ke excel (tidak semua data, tergatung yang terlihat)
 > Export detail instruction ke pdf
-> Send email hasil export pdf ke email yang dituju
-> Mengubah data instruction
-> Mengubah status data instruction ke terminate
+> Send Email, akan mengirimkan hasil export pdf detail instruction ke email yang dituju 
+> Tidak bisa mengedit instructions yang berstatus complete
+> Link to berisi transaction yang jika instruction bertipe LI maka hanya transaction dengan tipe Transfer dan Call Of saja yang tampil, sedangkan SI menampilkan semua jenis transaction
+> Ketika data diedit akan menambahkan prefix R-{jumlah diedit}
 
+========= Pending =========
+> Membuat Login dan Logout, serta middleware
+> Menampilkan dan mencari data recipients
+> Membuat data recipients
+> Export data instruction ke excel (tergantung jumlah data yang terlihat)
+> Export data detail instruction ke pdf
+> Send email hasil export pdf ke email yang dituju
+
+========= On Progress =========
+> Menampilkan dan mencari data instructions (Filter Open(status == In Progress || status == Draft) dan Closed(status == Complete || status == Canceled) ) (hanya tampilkan beberapa field) [daffa]
+> Membuat insert data instruction (sekalian tambahkan activity note) [akmal]
+> Terminate data instruction (sekalian tambahkan activity note) [daffa]
+> Mengedit data instruction (sekalian tambahkan activity note) [akmal]
+> Menampilkan detail instruction [daffa]
+
+> Menambahkan vendor invoice [ricko]
+> Mengedit vendor invoice [ricko]
+> Menghapus vendor invoice [hendrik]
+> Receive all vendor invoice (mengubah status ke complete)(sekalian tambahkan activity note) [hendrik]
+
+> Menambahkan internal only (internal note berserta attachments) [whisnu]
+> Mengedit internal only (internal note) [whisnu]
+> Menghapus internal only (internal note) [hendrik]
+
+========= Complete =========
 > Menampilkan dan Mencari data vendor
-> Mencari data vendor address dari vendor yang dipilih
     
-> Menambahkan data invoice_target
 > Menampilkan dan mencari data invoice_target
+> Menambahkan data invoice_target
+
+> Menampilkan dan mencari data customer
+
+> Menampilkan dan mencari data transaction

@@ -1,10 +1,10 @@
 [
 	{
-		"_id": "", // mongodb ID
+		"_id": "<Object_id>", // mongodb ID
 		"name": "Contoh Target 1" // nama target invoice
 	},
 	{
-		"_id": "",
+		"_id": "<Object_id>",
 		"name": "Contoh Target 2"
 	}
 ]

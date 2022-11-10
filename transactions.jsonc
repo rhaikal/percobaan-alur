@@ -1,17 +1,17 @@
 [
 	{
 		"_id": "", // mongodb ID
-		"transaction_type": "Transfer", // Jenis transaction
-		"transaction_id": "TF-2022-0002" // ID dari transaction
+		"no": "TF-2022-0002", // ID dari transaction
+		"type": "Transfer" // Jenis transaction
 	},
 	{
 		"_id": "",
-		"transaction_type": "Call Of",
-		"transaction_id": "CO-2022-0001"
+		"no": "CO-2022-0001",
+		"type": "Call Of"
 	},
 	{
 		"_id": "",
-		"transaction_type": "Inspection",
-		"transaction_id": "I-1212"
+		"no": "I-1212",
+		"type": "Inspection"
 	}
 ]

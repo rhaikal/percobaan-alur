@@ -1,0 +1,52 @@
+base localhost:8000/api
+
+Get all vendors
+GET /vendors
+Query Parameter : 
+    string search -> keyword pencarian berdasarkan name
+    int limit (default:10) -> limit data yang tampil
+
+Add vendors address
+POST /vendors/{id_vendors}/address
+Body Json : 
+    string address -> alamat yang ditambahkan
+    int limit (default:10) -> limit data yang tampil
+
+Get vendor address
+GET /vendors/{id_vendors}/address
+Query Parameter : 
+    string address -> alamat yang dicari
+    int limit (default:10) -> limit data yang tampil
+
+Get all invoice targets
+GET /invoice-targets
+Query Parameter : 
+    string search -> keyword pencarian berdasarkan name
+    int limit (default:10) -> limit data yang tampil
+
+Add new invoice target
+POST /invoice-targests
+Body Json : 
+    string name -> nama untuk invoice target
+
+Get all customers
+GET /customers
+Query Parameter : 
+    string search -> keyword pencarian berdasarkan name
+    int limit (default:10) -> limit data yang tampil
+
+Get data transactions
+GET /transactions 
+Query Parameter : 
+    string instructionType (required) -> tipe dari instruction (SI/LI)
+    string search -> keyword pencarian berdasarkan transaction_id
+    int limit (default:10) -> limit data yang tampil
+
+Get data instructions 
+GET /instructions
+Query Parameter : 
+    string tab (required) -> bisa memilih tab open/close
+    string search -> keyword pencarian berdasarkan semua field
+
+Add instructions
+POST 
