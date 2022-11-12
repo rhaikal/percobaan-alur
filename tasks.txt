@@ -24,12 +24,12 @@
 
 > Menambahkan vendor invoice [ricko]
 > Mengedit vendor invoice [ricko]
-> Menghapus vendor invoice [hendrik]
-> Receive all vendor invoice (mengubah status ke complete)(sekalian tambahkan activity note) [hendrik]
+> Menghapus vendor invoice [ricko]
+> Receive all vendor invoice (mengubah status ke complete)(sekalian tambahkan activity note) [ricko]
 
 > Menambahkan internal only (internal note berserta attachments) [whisnu]
 > Mengedit internal only (internal note) [whisnu]
-> Menghapus internal only (internal note) [hendrik]
+> Menghapus internal only (internal note) [akmal]
 
 ========= Complete =========
 > Menampilkan dan Mencari data vendor

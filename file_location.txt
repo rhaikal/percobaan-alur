@@ -1,0 +1,12 @@
+instruction attachment
+public/file/instruction/{id}/{file}
+
+vendor invoice
+public/file/instruction/{id}/vendor_invoice/{id}/support/{file}
+public/file/instruction/{id}/vendor_invoice/{id}/attc/{file}
+
+internal only
+public/file/instruction/{id}/internal_only/{file}
+
+cancelation
+public/file/instruction/{id}/cancel/{file}

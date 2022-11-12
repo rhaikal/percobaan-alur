@@ -1,10 +1,14 @@
 [
 	{
 		"_id": "", // mongodb ID
-		"name": "Alfi" // nama customer
+		"name": "Alfi", // nama customer
+		"created_at": "", // tanggal dibuat
+		"updated_at": "" // tanggal diubah
 	},
 	{
 		"_id": "",
-		"name": "John Doe"
+		"name": "John Doe",
+		"created_at": "", // tanggal dibuat
+		"updated_at": "" // tanggal diubah
 	}
 ]
