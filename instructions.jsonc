@@ -15,7 +15,7 @@
 		// vendor invoice bisa berisi null pada saat pertama kali dibuat
 		// vendor invoice ditambahkan apabila status instructions dalam in progress
 		// satu instruction bisa memiliki banyak vendor invoice
-		"vendor_invoice": [
+		"vendor_invoices": [
 			{
 				"_id": "<Object_ID>",
 				"no": "INV-2022-0001", // invoice nomor
@@ -68,17 +68,17 @@
 
 		// Attachments untuk instructions, bisa memiliki lebih dari 1, berisi null jika tidak ada attachment
 		"attachments": ["link to file", "link to another file"],
-		"notes": "Ini adalah contoh catatan", // catatan untuk instructions yang diberikan
+		"note": "Ini adalah contoh catatan", // catatan untuk instructions yang diberikan
 		"link_to": "another transaksi", // link to ini berisi data yang dipilih dari collection transactions.jsonc, Jika tipe instruction adalah LI maka hanya transactions dengan tipe Transfer dan call of saja yang ditampilkan untuk dipilih, jika tipe instruction adalah SI, maka transactions yang ditampilkan dapat semua tipe
 		// link to dapat berisikan null
 
 		// internal only dapat berisikan null
 		// internal only dapat ditambahkan ketika instructions mempunyai status in progress
-		"internal_only": {
+		"internal": {
 			// jika tidak ada attachment yang diberikan akan bernilai null, jika ada akan array berisi link ke file
 			"attachments": ["link to another file", "link to another file"],
 			// internal note berisi null, jika tidak terdapat catatan
-			"internal_note": [
+			"notes": [
 				{
 					"_id": "<Object_ID>",
 					"note": "Tolong di cek", // pesan yang diberikan
