@@ -1,52 +1,83 @@
 base localhost:8000/api
 
-Get all vendors
+Get all vendors (ready)
 GET /vendors
 Query Parameter : 
     string search -> keyword pencarian berdasarkan name
-    int limit (default:10) -> limit data yang tampil
 
-Add vendors address
+Add vendors address (ready)
 POST /vendors/{id_vendors}/address
 Body Json : 
     string address -> alamat yang ditambahkan
-    int limit (default:10) -> limit data yang tampil
 
-Get vendor address
+Get vendor address (pending)
 GET /vendors/{id_vendors}/address
 Query Parameter : 
-    string address -> alamat yang dicari
-    int limit (default:10) -> limit data yang tampil
+    string search -> alamat yang dicari
 
-Get all invoice targets
+Get all invoice targets (ready)
 GET /invoice-targets
 Query Parameter : 
     string search -> keyword pencarian berdasarkan name
-    int limit (default:10) -> limit data yang tampil
 
-Add new invoice target
-POST /invoice-targests
+Add new invoice target (ready)
+POST /invoice-targets
 Body Json : 
     string name -> nama untuk invoice target
 
-Get all customers
+Get all customers (ready)
 GET /customers
 Query Parameter : 
     string search -> keyword pencarian berdasarkan name
-    int limit (default:10) -> limit data yang tampil
 
-Get data transactions
+Get data transactions (ready)
 GET /transactions 
 Query Parameter : 
     string instructionType (required) -> tipe dari instruction (SI/LI)
     string search -> keyword pencarian berdasarkan transaction_id
-    int limit (default:10) -> limit data yang tampil
 
-Get data instructions 
+Get data instructions (ready)
 GET /instructions
 Query Parameter : 
-    string tab (required) -> bisa memilih tab open/close
+    string tab (default:open) -> bisa memilih tab open/complete
     string search -> keyword pencarian berdasarkan semua field
 
-Add instructions
-POST 
+Add data instructions (ready)
+POST /instructions
+Body :
+    string type -> tipe untuk instruction (LI/SI)
+    string assigned_vendor -> 
+    string attention_of
+    string quotation_no
+    string vendor_address
+    string invoice_to
+    string customer
+    string customer_po_no
+    array costs [
+        [
+            string description
+            int qty
+            string uom -> satuan dari kuantitas (SHP|BILL|HRS|MEN|PCS|TRIP|MT)
+            float unit_price
+            int discount
+            int vat 
+            float sub_total
+            float total
+            string charge_to -> hanya bisa (Inosoft/Customer)
+        ], 
+        [ ... ]
+    ]
+    string note 
+    string link_to
+    array attachments [
+        upload file-1, upload file-2
+    ]
+
+Get detail data instructions (ready)
+GET /instructions/{id_instruction}
+
+Terminate data instructions (ready)
+PATCH /instructions/{id_instruction}/terminate
+Body : 
+    string reason (required) -> alasan kenapa di cancel
+    file attachment -> file attachment

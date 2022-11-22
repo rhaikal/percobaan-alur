@@ -3,37 +3,42 @@
 > Export all instructions ke excel (tidak semua data, tergatung yang terlihat)
 > Export detail instruction ke pdf
 > Send Email, akan mengirimkan hasil export pdf detail instruction ke email yang dituju 
-> Tidak bisa mengedit instructions yang berstatus complete
+> Tidak bisa mengedit instructions yang berstatus Complete dan Canceled
 > Link to berisi transaction yang jika instruction bertipe LI maka hanya transaction dengan tipe Transfer dan Call Of saja yang tampil, sedangkan SI menampilkan semua jenis transaction
-> Ketika data diedit akan menambahkan prefix R-{jumlah diedit}
+> Ketika data LiSi diedit akan menambahkan prefix R-{jumlah diedit}
 
 ========= Pending =========
 > Membuat Login dan Logout, serta middleware
-> Menampilkan dan mencari data recipients
-> Membuat data recipients
 > Export data instruction ke excel (tergantung jumlah data yang terlihat)
+> Menampilkan dan mencari data recipients (data untuk penerima email)
+> Membuat data recipients (data untuk penerima email)
 > Export data detail instruction ke pdf
 > Send email hasil export pdf ke email yang dituju
 
 ========= On Progress =========
-> Menampilkan dan mencari data instructions (Filter Open(status == In Progress || status == Draft) dan Closed(status == Complete || status == Canceled) ) (hanya tampilkan beberapa field) [daffa]
-> Membuat insert data instruction (sekalian tambahkan activity note) [akmal]
-> Terminate data instruction (sekalian tambahkan activity note) [daffa]
-> Mengedit data instruction (sekalian tambahkan activity note) [akmal]
-> Menampilkan detail instruction [daffa]
+> Menambah attachment di internal
+> Menghapus attachment di internal
 
-> Menambahkan vendor invoice [ricko]
+> Mengedit data instruction (sekalian tambahkan activity note) [akmal]
+
 > Mengedit vendor invoice [ricko]
-> Menghapus vendor invoice [ricko]
-> Receive all vendor invoice (mengubah status ke complete)(sekalian tambahkan activity note) [ricko]
 
 > Menambahkan internal only (internal note berserta attachments) [whisnu]
 > Mengedit internal only (internal note) [whisnu]
 > Menghapus internal only (internal note) [akmal]
 
 ========= Complete =========
-> Menampilkan dan Mencari data vendor
-    
+> Menampilkan dan mencari data instructions (Filter Open(status == In Progress || status == Draft) dan Closed(status == Complete || status == Canceled) ) (hanya tampilkan beberapa field)
+> Membuat insert data instruction (sekalian tambahkan activity note)
+> Menampilkan detail instruction
+> Terminate data instruction (sekalian tambahkan activity note)
+
+> Menambahkan vendor invoice 
+> Menghapus vendor invoice
+> Receive all vendor invoice (mengubah status ke complete)(sekalian tambahkan activity note)
+
+> Menampilkan dan Mencari data vendor    
+
 > Menampilkan dan mencari data invoice_target
 > Menambahkan data invoice_target
 

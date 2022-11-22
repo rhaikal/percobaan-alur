@@ -1,0 +1,38 @@
+// Berikut adalah standard structure response json api kita
+
+[
+	// jika status 200 : OK
+	{
+		"message": "Successfully get vendors",
+		"data": [
+			{ "example": "example" },
+			{ "example": "example" },
+			{ "example": "example" }
+		]
+	},
+
+	// jika status 201 : Created
+	{
+		"message": "Vendor created Successfully",
+		"data": null
+	},
+
+	// jika status 422 : Validation Error
+	{
+		"message": "Successfully get vendors",
+		"errors": {
+			"name": ["required fields", "min length 3"],
+			"addresses": ["required", "must be an array"]
+		}
+	},
+
+	// jika status 404 : Not Found
+	{
+		"message": "Vendor not found"
+	},
+
+	// Jika status 400 : Bad Request
+	{
+		"message": "Vendor not found"
+	}
+]

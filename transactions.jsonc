@@ -1,23 +1,23 @@
 [
 	{
-		"_id": "", // mongodb ID
+		"id": "637ccc2e61a252297206f7d5", // mongodb ID
 		"no": "TF-2022-0002", // ID dari transaction
 		"type": "Transfer", // Jenis transaction
-		"created_at": "", // tanggal dibuat
-		"updated_at": "" // tanggal diubah
+		"created_at": "d/m/y h:i A", // tanggal dibuat
+		"updated_at": "d/m/y h:i A" // tanggal diubah
 	},
 	{
-		"_id": "",
+		"id": "637ccc2e61a252297206f7d5",
 		"no": "CO-2022-0001",
 		"type": "Call Of",
-		"created_at": "", // tanggal dibuat
-		"updated_at": "" // tanggal diubah
+		"created_at": "d/m/y h:i A", // tanggal dibuat
+		"updated_at": "d/m/y h:i A" // tanggal diubah
 	},
 	{
-		"_id": "",
-		"no": "I-1212",
+		"id": "637ccc2e61a252297206f7d5",
+		"no": "INSP-2022-0001",
 		"type": "Inspection",
-		"created_at": "", // tanggal dibuat
-		"updated_at": "" // tanggal diubah
+		"created_at": "d/m/y h:i A", // tanggal dibuat
+		"updated_at": "d/m/y h:i A" // tanggal diubah
 	}
 ]

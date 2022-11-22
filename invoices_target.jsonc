@@ -1,14 +1,14 @@
 [
 	{
-		"_id": "<Object_id>", // mongodb ID
+		"id": "<Object_id>", // mongodb ID
 		"name": "Contoh Target 1", // nama target invoice
-		"created_at": "", // tanggal dibuat
-		"updated_at": "" // tanggal diubah
+		"created_at": "d/m/y h:i A", // tanggal dibuat
+		"updated_at": "d/m/y h:i A" // tanggal diubah
 	},
 	{
-		"_id": "<Object_id>",
+		"id": "<Object_id>",
 		"name": "Contoh Target 2",
-		"created_at": "", // tanggal dibuat
-		"updated_at": "" // tanggal diubah
+		"created_at": "d/m/y h:i A", // tanggal dibuat
+		"updated_at": "d/m/y h:i A" // tanggal diubah
 	}
 ]

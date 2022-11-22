@@ -1,12 +1,12 @@
 [
 	{
-		"_id": "", // mongodb ID
+		"id": "6377a3fa61b302c9e70e3a92", // mongodb ID
 		"name": "Alfi", // nama customer
 		"created_at": "", // tanggal dibuat
 		"updated_at": "" // tanggal diubah
 	},
 	{
-		"_id": "",
+		"id": "6377a3fa61b302c9e70e3a92",
 		"name": "John Doe",
 		"created_at": "", // tanggal dibuat
 		"updated_at": "" // tanggal diubah

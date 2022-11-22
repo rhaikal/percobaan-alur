@@ -1,16 +1,16 @@
 [
 	{
-		"_id": "<Object_id>", // mongodb ID
+		"id": "<Object_id>", // mongodb ID
 		"name": "A", // Nama vendor
 		"address": ["A", "B"], // satu vendor bisa memiliki lebih dari 1 alamat, dan alamaty tersebut bisa dipilih ke dalam dropdown vendor address, jadi vendor yang dipilih berpengaruh terhadap alamat yang tampil di vendor address
-		"created_at": "", // tanggal dibuat
-		"updated_at": "" // tanggal diubah
+		"created_at": "d/m/y h:i A", // tanggal dibuat
+		"updated_at": "d/m/y h:i A" // tanggal diubah
 	},
 	{
-		"_id": "<Object_id>",
+		"id": "<Object_id>",
 		"name": "B",
 		"address": ["C", "D"],
-		"created_at": "", // tanggal dibuat
-		"updated_at": "" // tanggal diubah
+		"created_at": "d/m/y h:i A", // tanggal dibuat
+		"updated_at": "d/m/y h:i A" // tanggal diubah
 	}
 ]

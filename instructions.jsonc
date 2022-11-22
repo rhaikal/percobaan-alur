@@ -1,7 +1,7 @@
 [
 	// ini adalan contoh instruction yang pertama
 	{
-		"_id": "86d787d98767g68", // Object_ID otomatis oleh mongodb
+		"id": "86d787d98767g68", // Object_ID otomatis oleh mongodb
 		"status": "In Progress", // status dari instructiuons (Draft, In Progress, Complete, Terminate)
 
 		"no": "LI-2022-0302 R001", // {type}-{tahun_dibuat}-{nomor} R{angka revisi}, instruction id akan dihitung otomatis
@@ -17,17 +17,17 @@
 		// satu instruction bisa memiliki banyak vendor invoice
 		"vendor_invoices": [
 			{
-				"_id": "<Object_ID>",
+				"id": "<Object_ID>",
 				"no": "INV-2022-0001", // invoice nomor
-				"attachments": "link to file attachment", // berisi link ke folder tempat penyimpanan attachments
+				"attachment": "link to file attachment", // berisi link ke folder tempat penyimpanan attachments
 				// bisa memiliki lebih dari satu supporting attachments, yang berisi sama dengan invoice attachments
 				// attachment bernilai null jika kosong
 				"supporting_documents": ["link to another file", "link to another file"]
 			},
 			{
-				"_id": "<Object_ID>",
+				"id": "<Object_ID>",
 				"no": "INV-2022-0002", // invoice nomor
-				"attachments": "link to file attachment", // berisi link ke folder tempat penyimpanan attachments
+				"attachment": "link to file attachment", // berisi link ke folder tempat penyimpanan attachments
 				// bisa memiliki lebih dari satu supporting attachments, yang berisi sama dengan invoice attachments
 				// attachment bernilai null jika kosong
 				"supporting_documents": ["link to another file", "link to another file"]
@@ -41,7 +41,7 @@
 		// satu instructuions bisa memiliki banyak cost, dan jumlah total cost dapat dihitung dari total pada tiap tiap cost
 		// untuk field vat_amount (pada table di frontend) itu dapat dihitung sendiri
 		// cost berisi null apabila belum terdapat cost yang diberikan
-		"cost": [
+		"costs": [
 			{
 				"description": "cleaning pipe", // berisi deskripsi apa yang dilakukan
 				"qty": 2, // quantitas yang dibuthkan
@@ -66,7 +66,7 @@
 			}
 		],
 
-		// Attachments untuk instructions, bisa memiliki lebih dari 1, berisi null jika tidak ada attachment
+		// Attachments untuk instructions, bisa memiliki lebih dari 1, berisi array kosong jika tidak ada attachment
 		"attachments": ["link to file", "link to another file"],
 		"note": "Ini adalah contoh catatan", // catatan untuk instructions yang diberikan
 		"link_to": "another transaksi", // link to ini berisi data yang dipilih dari collection transactions.jsonc, Jika tipe instruction adalah LI maka hanya transactions dengan tipe Transfer dan call of saja yang ditampilkan untuk dipilih, jika tipe instruction adalah SI, maka transactions yang ditampilkan dapat semua tipe
@@ -75,19 +75,19 @@
 		// internal only dapat berisikan null
 		// internal only dapat ditambahkan ketika instructions mempunyai status in progress
 		"internal": {
-			// jika tidak ada attachment yang diberikan akan bernilai null, jika ada akan array berisi link ke file
+			// jika tidak ada attachment yang diberikan akan bernilai array kosong, jika ada akan array berisi link ke file
 			"attachments": ["link to another file", "link to another file"],
-			// internal note berisi null, jika tidak terdapat catatan
+			// internal note berisi array kosong, jika tidak terdapat catatan
 			"notes": [
 				{
-					"_id": "<Object_ID>",
+					"id": "<Object_ID>",
 					"note": "Tolong di cek", // pesan yang diberikan
 					"noted_by": "user1", //  nama user yang memberikan noted
 					"created_at": "2022-11-08 18:11:20", // tanggal dan waktu dibuat
 					"edited_at": "2022-11-08 18:11:20" // tanggal dan waktu diedit
 				},
 				{
-					"_id": "<Object_ID>",
+					"id": "<Object_ID>",
 					"note": "Oke",
 					"noted_by": "user2",
 					"created_at": "2022-11-08 18:11:20",
@@ -97,26 +97,31 @@
 		},
 
 		// otomatis diisi dari backend
-		"activity_note": [
+		"activity_notes": [
 			{
-				"note": "Created Instruction", // pesan aktivitas
+				"note": "Create 3rd Party Instruction", // pesan aktivitas
 				"performed_by": "Alfi", // nama user yang melakukan perubahan
 				"date": "2022-11-08 18:11:20" // tanggal aktivitas tersebut dilakukan
 			},
 			{
-				"note": "Receive all invoice",
+				"note": "Receive all invoices 3rd Party Instruction",
 				"performed_by": "user",
-				"date": "2022-11-08 18:11:20"
+				"date": "d/m/y h:i A"
 			},
 			{
-				"note": "Canceled Instruction",
+				"note": "Cancel 3rd Party Instruction",
 				"performed_by": "user",
-				"date": "2022-11-08 18:11:20"
+				"date": "d/m/y h:i A"
 			},
 			{
-				"note": "Edited Instruction",
+				"note": "Edit 3rd Party Instruction",
 				"performed_by": "user",
-				"date": "kapan suatu aktivitas terjadi"
+				"date": "d/m/y h:i A"
+			},
+			{
+				"note": "Create Draft 3rd Party Instruction",
+				"performed_by": "user",
+				"date": "d/m/y h:i A"
 			}
 		],
 
@@ -124,7 +129,7 @@
 		"cancellation": {
 			"reason": "invoice doesn't exists", //alasan kenapa dicancel
 			"canceled_by": "user", // dicancel oleh user
-			"attachment": ["lokasi upload file", "lokasi kedua"] // bukti file lampiran, bisa berisi null apabila tidak dikirimkan
+			"attachments": ["lokasi upload file", "lokasi kedua"] // bukti file lampiran, bisa berisi null apabila tidak dikirimkan
 		}
 	}
 ]

@@ -1,12 +1,12 @@
-instruction attachment
-public/file/instruction/{id}/{file}
+instruction attachments
+/files/instructions/{id_instruction}/{file}
 
 vendor invoice
-public/file/instruction/{id}/vendor_invoice/{id}/support/{file}
-public/file/instruction/{id}/vendor_invoice/{id}/attc/{file}
+/files/instructions/{id_instruction}/vendor-invoices/{id_vendor_invoices}/supports/{file}
+/files/instructions/{id_instruction}/vendor-invoices/{id_vendor_invoices}/{file}
 
 internal only
-public/file/instruction/{id}/internal_only/{file}
+/files/instructions/{id_instruction}/internal/{file}
 
 cancelation
-public/file/instruction/{id}/cancel/{file}
+/files/instructions/{id_instruction}/terminate/{file}
