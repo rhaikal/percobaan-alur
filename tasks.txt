@@ -1,41 +1,42 @@
 ========= Note =========
 > Semua attachments berupa pdf dan doc
-> Export all instructions ke excel (tidak semua data, tergatung yang terlihat)
+> Export all instructions ke excel (jumlah-field: semua data|field: sama dengan tabel instruction)
 > Export detail instruction ke pdf
 > Send Email, akan mengirimkan hasil export pdf detail instruction ke email yang dituju 
 > Tidak bisa mengedit instructions yang berstatus Complete dan Canceled
 > Link to berisi transaction yang jika instruction bertipe LI maka hanya transaction dengan tipe Transfer dan Call Of saja yang tampil, sedangkan SI menampilkan semua jenis transaction
 > Ketika data LiSi diedit akan menambahkan prefix R-{jumlah diedit}
+> Saran untuk export pdf menggunakan package barryvdh/laravel-dompdf
+> Saran untuk export excel menggunakan maatwebsite/excel
 
 ========= Pending =========
-> Membuat Login dan Logout, serta middleware
-> Export data instruction ke excel (tergantung jumlah data yang terlihat)
-> Menampilkan dan mencari data recipients (data untuk penerima email)
-> Membuat data recipients (data untuk penerima email)
-> Export data detail instruction ke pdf
-> Send email hasil export pdf ke email yang dituju
+???
 
 ========= On Progress =========
-> Menambah attachment di internal
-> Menghapus attachment di internal
+> Menampilkan dan mencari data recipients (data untuk penerima email) [daffa]
+> Menambah data recipients (data untuk penerima email) [daffa]
 
-> Mengedit data instruction (sekalian tambahkan activity note) [akmal]
+> Menambah internal attachment di internal [ricko]
+> Menghapus internal attachment di internal [ricko]
 
-> Mengedit vendor invoice [ricko]
+> Menambahkan internal note [whisnu]
+> Mengedit internal note [whisnu]
+> Menghapus internal note [whisnu]
 
-> Menambahkan internal only (internal note berserta attachments) [whisnu]
-> Mengedit internal only (internal note) [whisnu]
-> Menghapus internal only (internal note) [akmal]
+> Export data detail instruction ke pdf [akmal]
+> Send email hasil export pdf ke email yang dituju [akmal]
 
 ========= Complete =========
 > Menampilkan dan mencari data instructions (Filter Open(status == In Progress || status == Draft) dan Closed(status == Complete || status == Canceled) ) (hanya tampilkan beberapa field)
 > Membuat insert data instruction (sekalian tambahkan activity note)
 > Menampilkan detail instruction
 > Terminate data instruction (sekalian tambahkan activity note)
+> Mengedit data instruction (sekalian tambahkan activity note)
 
 > Menambahkan vendor invoice 
 > Menghapus vendor invoice
 > Receive all vendor invoice (mengubah status ke complete)(sekalian tambahkan activity note)
+> Mengedit vendor invoice
 
 > Menampilkan dan Mencari data vendor    
 
@@ -45,3 +46,6 @@
 > Menampilkan dan mencari data customer
 
 > Menampilkan dan mencari data transaction
+
+> Export data instruction ke excel (field:seperti halaman utama|jumlah data:semua data)
+> Membuat Login dan Logout, serta middleware (ubah juga data user di activity note)
